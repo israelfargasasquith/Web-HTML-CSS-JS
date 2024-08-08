@@ -1,0 +1,22 @@
+        * {
+            font-family: 'Times New Roman', Times, serif;
+            color: black;
+            background-color: bisque;
+        }
+
+        h1 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: large;
+            text-decoration: underline;
+        }
+        p{
+            font-style: italic;
+            justify-content: center;
+        }
+        a{
+            color: blue;
+        }
+        input{
+            background-color: white;
+        
+        }
