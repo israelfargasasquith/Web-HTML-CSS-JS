@@ -6,17 +6,34 @@
 
         h1 {
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size: large;
+            font-style: italic;
+            font-size: 34px;
+            text-align: center;
             text-decoration: underline;
         }
         p{
             font-style: italic;
             justify-content: center;
         }
+        div > p{
+            text-decoration:overline ;
+            justify-content: center;
+            color: blueviolet;
+        }
         a{
             color: blue;
         }
         input{
             background-color: white;
+            border-color: black;
+            border-width: 2px;
         
+        }
+        p{
+            font-family: fantasy;
+            color: rgb(170, 114, 125);
+            font-style: normal;
+            font-size: 14px;
+            text-align: left;
+            text-decoration: none;
         }
