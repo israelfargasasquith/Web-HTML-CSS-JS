@@ -11,29 +11,113 @@
             text-align: center;
             text-decoration: underline;
         }
-        p{
+
+        p {
             font-style: italic;
             justify-content: center;
         }
-        div > p{
-            text-decoration:overline ;
+
+        div>p {
+            text-decoration: overline;
             justify-content: center;
             color: blueviolet;
         }
-        a{
+
+        a {
             color: blue;
         }
-        input{
+
+        input {
             background-color: white;
             border-color: black;
             border-width: 2px;
-        
+
         }
-        p{
+
+        p {
             font-family: fantasy;
             color: rgb(170, 114, 125);
             font-style: normal;
             font-size: 14px;
             text-align: left;
             text-decoration: none;
+        }
+
+        li {
+            font-style: italic;
+            text-decoration: dotted;
+        }
+
+        .listaTerminada {
+            font-style: normal;
+            text-decoration: line-through;
+        }
+
+        a:hover {
+            color: rgb(30, 210, 60);
+        }
+
+        select {
+            color: rgb(226, 43, 43);
+        }
+
+        option.mitico {
+            color: rgb(226, 43, 43);
+            font-weight: bold;
+        }
+
+        select option:hover {
+            color: rgb(92, 43, 226);
+            font-family: cursives;
+            background-color: blueviolet;
+        }
+
+        textarea[placeholder] {
+            font-size: 24px;
+            font-stretch: narrower;
+        }
+
+        ul li.libros {
+            float: left;
+        }
+
+        #bajoLibros>p {
+            color: red;
+            text-decoration: revert;
+            justify-content: revert;
+            clear: both;
+            display: block;
+        }
+
+        .prueba {
+            float: left;
+            margin-left: 10em;
+        }
+
+        #conScroll {
+            clear: both;
+            border-color: black;
+            border-width: 1em;
+            border-style: solid;
+            overflow: scroll;
+            width: 20em;
+            height: 20em;
+        }
+
+        #fijo {
+            position: fixed;
+            width: 300px;
+            height: 140px;
+            top: 100px;
+            left: 30px;
+            background-color: #ff8800;
+            color: #fff;
+            padding: 15px;
+            z-index: 10;
+        }
+        
+        #fijo:hover {
+            left: auto;
+            right: 0;
+            color: chartreuse;
         }

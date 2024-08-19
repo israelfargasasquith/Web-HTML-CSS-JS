@@ -14,3 +14,11 @@
     background-color: red;
     font-style: italic;
 }
+
+#miBarra{
+    border: 1rem;
+    border-radius: 10px;
+    cursor: help;
+    border-width: 10px;
+    border-style: solid;
+}

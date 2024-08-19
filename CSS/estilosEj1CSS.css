@@ -1,0 +1,35 @@
+li{
+    background-color: gray;
+}
+
+#elem2_1{
+    background-color: orange;
+}
+
+.orden{
+    font-size: 150%;
+}
+
+.item{
+    text-decoration: underline;
+}
+
+span,i{
+    font-weight: bold;
+}
+
+ol li{
+    color: red;
+}
+
+ul li{
+    color: blue;
+}
+
+span.item {
+    font-size: 50%
+}
+
+ul > .item{
+    border: 1px solid red;
+}

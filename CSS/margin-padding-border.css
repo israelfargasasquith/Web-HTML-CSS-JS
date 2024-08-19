@@ -1,0 +1,35 @@
+*{
+    border: 2px solid black;
+}
+
+body{
+    margin: 0px 0px 0px 0px;
+}
+
+header{
+    border-color: blue;
+    margin: 1px 1px 1px 1px;
+}
+div{
+    padding: 1em 0em;
+}
+
+p::first-letter{
+    color: aqua;
+    text-decoration: dotted;
+    font-size: 1.5em;
+}
+
+header > p{
+    border-color: rgb(0, 255, 102);
+    margin: 2px 2px 2px 2px;
+    padding: 2px 2px 2px 2px;
+    text-align: center;
+}
+
+i::first-line{
+    text-transform: uppercase;
+    text-indent: 1rem;
+    font-style: normal;
+}
+
