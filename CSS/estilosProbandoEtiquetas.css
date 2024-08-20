@@ -15,6 +15,12 @@
         p {
             font-style: italic;
             justify-content: center;
+            font-family: fantasy;
+            color: rgb(170, 114, 125);
+            font-style: normal;
+            font-size: 14px;
+            text-align: left;
+            text-decoration: none;
         }
 
         div>p {
@@ -27,34 +33,14 @@
             color: blue;
         }
 
+        a:hover {
+            color: rgb(30, 210, 60);
+        }
+
         input {
             background-color: white;
             border-color: black;
             border-width: 2px;
-
-        }
-
-        p {
-            font-family: fantasy;
-            color: rgb(170, 114, 125);
-            font-style: normal;
-            font-size: 14px;
-            text-align: left;
-            text-decoration: none;
-        }
-
-        li {
-            font-style: italic;
-            text-decoration: dotted;
-        }
-
-        .listaTerminada {
-            font-style: normal;
-            text-decoration: line-through;
-        }
-
-        a:hover {
-            color: rgb(30, 210, 60);
         }
 
         select {
@@ -77,8 +63,33 @@
             font-stretch: narrower;
         }
 
+        li {
+            font-style: italic;
+            text-decoration: dotted;
+            list-style: none;
+        }
+
+        .listaPorLeer {
+            counter-reset: numeroLibros;
+            counter-reset: numeroLibros 0;
+        }
+
+        .listaPorLeer li {
+            counter-increment: numeroLibros;
+        }
+
+        .listaPorLeer li::before {
+            content: "Nº " counter(numeroLibros)":";
+            font-weight: bold;
+        }
+
         ul li.libros {
             float: left;
+        }
+
+        .listaTerminada {
+            font-style: normal;
+            text-decoration: line-through;
         }
 
         #bajoLibros>p {
@@ -115,7 +126,7 @@
             padding: 15px;
             z-index: 10;
         }
-        
+
         #fijo:hover {
             left: auto;
             right: 0;

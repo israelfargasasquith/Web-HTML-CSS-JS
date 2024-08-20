@@ -8,6 +8,19 @@ body {
 }
 
 a {
-    color: ;
-    ="#dae3e5" alink="#db324d" vlink="#AB92BF"
+    color: #dae3e5;
 }
+
+a:visited {
+    color: #AB92BF;
+}
+
+a:active {
+    color: #db324d;
+}
+
+a:hover {
+    color: #92bf9f;
+    font-style: italic;
+}
+
