@@ -2,6 +2,7 @@
             font-family: 'Times New Roman', Times, serif;
             color: black;
             background-color: bisque;
+
         }
 
         h1 {
@@ -63,6 +64,12 @@
             font-stretch: narrower;
         }
 
+        strong {
+            font-size: 1.01em;
+            font-family: monospace;
+            text-transform: uppercase;
+        }
+
         li {
             font-style: italic;
             text-decoration: dotted;
@@ -70,7 +77,6 @@
         }
 
         .listaPorLeer {
-            counter-reset: numeroLibros;
             counter-reset: numeroLibros 0;
         }
 
@@ -78,9 +84,24 @@
             counter-increment: numeroLibros;
         }
 
+        .libros {
+            counter-reset: numeroLibros;
+        }
+
         .listaPorLeer li::before {
+            counter-increment: numeroLibros;
             content: "Nº " counter(numeroLibros)":";
             font-weight: bold;
+        }
+
+        li.libros strong::before {
+            counter-increment: nListas;
+            content: "Lista " counter(nListas)": ";
+        }
+
+        li.libros ol li::before {
+            counter-increment: numeroLibros;
+            content: "Libro Nº " counter(numeroLibros)": ";
         }
 
         ul li.libros {
@@ -90,6 +111,10 @@
         .listaTerminada {
             font-style: normal;
             text-decoration: line-through;
+        }
+
+        ul {
+            counter-reset: nListas;
         }
 
         #bajoLibros>p {
@@ -131,4 +156,13 @@
             left: auto;
             right: 0;
             color: chartreuse;
+        }
+
+        ul.niveles {
+            counter-reset: elemento;
+        }
+
+        ul.niveles li::before {
+            content: counters(elemento, ".") " ";
+            counter-increment: elemento;
         }
