@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica con Selectores de Atributo de CSS</title>
+    <style>
+        [data-type] {
+            font-weight: bold;
+        }
+
+        [href^="https"] {
+            color: green;
+        }
+
+        [target="_blank"] {
+            text-decoration: none;
+        }
+
+        [class$="-item"] {
+            font-style: italic;
+            font-size: 2rem;
+        }
+
+        [title~="chulo"] {
+            background-color: aqua;
+        }
+
+        input[disabled] {
+            color: rgb(168, 162, 196);
+        }
+
+        [class|="other"] {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <p data-type="info">Este párrafo tiene un atributo "data-type" con valor "info".</p>
+    <a href="https://www.ejemplo.com" target="_blank" title="enlace chulo">Enlace seguro (https)</a>
+    <a href="http://www.ejemplo.com" title="link">Enlace no seguro (http)</a>
+    <div class="menu-item">Elemento de menú con clase terminada en "-item"</div>
+    <div class="other-item">Otro elemento con clase terminada en "-item"</div>
+    <form action="#">
+        <p>
+            Nombre:
+            <br>
+            <input type="text" name="nombre" value="Miguel">
+        </p>
+        <p>
+            Apellidos:
+            <br>
+            <input type="text" name="apellidos" disabled value="Deshabilitado">
+        </p>
+        <p>
+            Sexo
+            <br>
+            <select name="sexo" disabled>
+                <option value="h">Hombre</option>
+                <option value="m">Mujer</option>
+                <option value="-" selected>No deseo indicarlo</option>
+            </select>
+        </p>
+    </form>
+</body>
+
+</html>

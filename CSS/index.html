@@ -11,21 +11,27 @@
 </head>
 
 <body>
-
     <header class="headerClass">
         <h1 id="idPrueba" class="headerClass__h1">Israel Fargas Asquith: Aprende CSS</h1>
-        <p>Esto es un cambio</p>
-        <button id="button1">Click me!</button>
+
         <nav>
-            <input type="text" placeholder="Hola">
-            <p>Esta es la barra de navegacion</p>
-            <input type="button" value="Pulsa">
-            <a href="probandoEtiquetasYCSS.html">Link a otro documento con CSS</a>
+            <input id="search" type="text" placeholder="Por ahora no se puede buscar nada...">
+            <input id="commitSearch" type="button" value="No hace nada">
+            <p>Pero si puedes elegir estas otras paginas web y elegir</p>
+            <ul class="listaLinks">
+                <li><a href="probandoEtiquetasYCSS.html">Libros</a></li>
+                <li><a href="ejercicio_1CSS.html">Primer ejercicio</a></li>
+                <li><a href="ProbandoEtiquetasYCSS2.html">Estopa</a></li>
+                <li><a href="pruebas.html">Pruebas</a></li>
+            </ul>
         </nav>
     </header>
     <article>
         <h2 atributo="Ejemplo">Esto es un h2</h2>
         <h2><b>Aqui es un b dentro de un h2</b></h2>
+        <button id="button1">Click me!</button>
+        <input class="dynamic" type="checkbox">
+        <p>Pulsa la checkbox también!</p>
         <b id="soloEste">Pon el raton encima</b>
         <section>
             <p id="idPrueba">Israel es un poco tonto a veces</p>
@@ -33,8 +39,8 @@
         </section>
     </article>
     <div class="contactForm">
-        <input type="text" class="contactForm__input" value="Prueba">
-        <input type="password" class="contactForm__input" value="Prueba2">
+        <input type="text" class="contactForm__input" placeholder="User">
+        <input type="password" class="contactForm__input" placeholder="Contraseña">
     </div>
     <aside>
         <p>Este es un aside en el que cambiaremos la vista del article</p>
