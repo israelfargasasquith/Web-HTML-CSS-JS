@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Ejercicio de selectores</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+
+        li {
+            background-color: blue;
+            padding: 0.75em;
+            width: 20%;
+            text-align: center;
+            font-size: 1.25em;
+            border-width: 0.1em;
+            border-color: white;
+            border-style: solid;
+        }
+
+        li:hover {
+            border-width: 0.1em;
+            border-color: red;
+            border-style: solid;
+        }
+
+        li:focus-within {
+            border-width: 0.1em;
+            border-color: red;
+            border-style: solid;
+        }
+
+        a:focus {
+            outline: none;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-family: 'Times New Roman', Times, serif;
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Universidad de Alicante</h1>
+
+    <ul>
+        <li><a href="presentacion.html">Presentación</a></li>
+        <li><a href="estudios.html">Estudios</a></li>
+        <li><a href="alumnos.html">Alumnos</a></li>
+        <li><a href="deportes.html">Deportes</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+    </ul>
+</body>
+
+</html>
