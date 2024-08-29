@@ -4,6 +4,25 @@
 <head>
     <meta charset="utf-8" />
     <title>HTML &amp; CSS: Curso práctico avanzado</title>
+    <style>
+        h2::first-letter {
+            font-size: 200%;
+        }
+
+        h2+p {
+            text-indent: 2em;
+
+        }
+
+        a::before {
+            content: "➡";
+        }
+
+        abbr::after {
+            content: " (" attr(title)")";
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>

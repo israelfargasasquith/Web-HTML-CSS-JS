@@ -23,6 +23,9 @@
             background-color: rgb(245, 245, 142);
         }
 
+        div:focus-within {
+            background-color: white;
+        }
 
         div {
             margin: 1em;
@@ -34,7 +37,8 @@
 
         input:hover,
         input:focus {
-            border: red solid 0.25em;
+            border: red solid 0.15em;
+            outline: none;
         }
 
         label {
@@ -109,11 +113,11 @@
             <label>Deseo recibir ofertas de iDESWEB</label>
             <br>
             <span>
-                <input type="radio">
+                <input type="radio" name="one">
                 <label>Una vez al día</label>
-                <input type="radio">
+                <input type="radio" name="one">
                 <label>Una vez a la semana</label>
-                <input type="radio">
+                <input type="radio" name="one">
                 <label>Una vez al mes</label>
                 <br>
                 <input type="checkbox" required>
