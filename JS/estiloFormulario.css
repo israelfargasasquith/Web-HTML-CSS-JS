@@ -22,17 +22,40 @@ i {
 
 #primera {
     font-size: 1.15em;
+    position: absolute;
+    margin-top: -2em;
+    margin-left: -2em;
+}
+
+div {
+    position: relative;
+    padding-bottom: 0.5em;
+}
+
+div::after {
+    content: '';
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 80%;
+    height: 0.3em;
+    background: radial-gradient(ellipse farthest-corner at top center, #1b6d1d 35%, #b4c4b4 80%);
+    background: -webkit-radial-gradient(ellipse farthest-corner at top center, #1b6d1d 35%, #b4c4b4 80%);
+    background: -moz-radial-gradient(ellipse farthest-corner at top center, #1b6d1d 35%, #b4c4b4 80%);
 }
 
 section {
-    max-width: 250px;
-    padding: 1rem;
-    color: white;
-    border-width: 3px;
+    max-width: 33%;
+    margin-left: 33%;
+    margin-right: 33%;
+    margin-top: 3em;
+    padding-top: 0;
+    padding-left: 4em;
+    border-width: 0.3em;
     border-style: solid;
     border-image:
         linear-gradient(to bottom,
-            red,
+            rgba(0, 0, 0, 1),
             rgba(0, 0, 0, 0)) 1 100%;
 
 }
