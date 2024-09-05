@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "Paragraph changed.";
+        }
+        function countSelected(selectObject) {
+            let numberSelected = 0;
+            for (let i = 0; i < selectObject.options.length; i++) {
+                if (selectObject.options[i].selected) {
+                    numberSelected++;
+                }
+            }
+            return numberSelected;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const btn = document.getElementById("btn");
+
+            btn.addEventListener("click", () => {
+                const musicTypes = document.selectForm.musicTypes;
+                alert(`You have selected ${countSelected(musicTypes)} option(s).`);
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+
+    <h2>Demo JavaScript in Head</h2>
+    <br>
+
+    <p id="demo">A Paragraph</p>
+    <br>
+    <button type="button" onclick="myFunction()">Try it</button>
+    <br>
+    <form name="selectForm">
+        <label for="musicTypes">Choose some music types, then click the button below:</label>
+        <br>
+        <select id="musicTypes" name="musicTypes" multiple>
+            <option selected>R&B</option>
+            <option>Jazz</option>
+            <option>Blues</option>
+            <option>New Age</option>
+            <option>Classical</option>
+            <option>Opera</option>
+        </select>
+        <br>
+        <button id="btn" type="button">How many are selected?</button>
+    </form>
+
+
+</body>
+
+</html>
