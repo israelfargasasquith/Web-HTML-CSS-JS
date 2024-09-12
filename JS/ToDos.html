@@ -12,6 +12,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
 
@@ -55,12 +58,12 @@
             color: white;
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 20px;
             flex: 1;
         }
 
         h1 {
-            font-family: Handjet;
+            font-family: Handjet, sans-serif;
         }
 
         .penIcon {
@@ -115,6 +118,35 @@
             color: white;
             font-weight: bold;
         }
+
+        #todos {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            color: white;
+            font-family: Handjet, sans-serif;
+        }
+
+        .todoItem {
+            display: flex;
+            gap: 5px;
+        }
+
+        .todoItem p {
+            flex: 1;
+        }
+
+        #actions {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: all .5s ease;
+        }
+
+        #actions:hover {
+            background-color: white;
+            color: black;
+        }
     </style>
 </head>
 
@@ -127,8 +159,10 @@
         <section id="addTodo">
             <form>
                 <input id="textInput" type="text" placeholder="Add your next To-Do">
-                <button>Add</button>
+                <button id="add">Add</button>
             </form>
+        </section>
+        <section id="todos">
 
         </section>
     </main>
@@ -139,6 +173,43 @@
     </footer>
 </body>
 <script>
+
+    let todos = [];
+    const todoList = document.getElementById('todos');
+    const todoInput = document.getElementById('textInput');
+    const inputButton = document.getElementById('add');
+
+    inputButton.addEventListener('click', addTodo);
+
+    function addTodo(e) {
+        e.preventDefault();
+        let textValue = todoInput.value;
+        todos.push(textValue);
+        todoList.innerHTML = '';
+        renderTodos();
+    }
+
+    function renderTodos() {
+        todos.forEach((todo, i) => {
+            let htmlActual = todoList.innerHTML;
+            let nuevoHTML = (
+                `<div class="todoItem">
+                    <p>${i + 1}. ${todo}</p>
+                    <div class="actions">
+                        <span class="material-symbols-outlined">
+                            check_circle
+                        </span>
+                          <span class="material-symbols-outlined">
+                            cancel
+                        </span>
+                    </div>
+                </div>`
+            );
+            let juntos = htmlActual + nuevoHTML;
+            todoList.innerHTML = juntos;
+        })
+    }
+    renderTodos();
 </script>
 
 </html>
