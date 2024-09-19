@@ -2,12 +2,20 @@
 <html>
 
 <head>
-    <script src="scriptsExample.js">
-    </script>
+    <title>Ejemplos de JS</title>
+    <link rel="icon" href="icons8-rat-24.png">
+
 </head>
+<style>
+    main {
+        border: 2px solid black;
+        width: 100;
+        height: 100vh;
+
+    }
+</style>
 
 <body>
-
     <h2>Demo JavaScript in Head</h2>
     <br>
 
@@ -30,7 +38,27 @@
         <button id="btn" type="button">How many are selected?</button>
     </form>
 
+    <main id="pruebas">
+
+    </main>
 
 </body>
+
+<script>
+    const palabras = ['manzana', 'pera', 'albaricoqua'];
+
+
+    function acabaA(words) {
+        return words.every(palabra => palabra[palabra.lenght - 1] == "a");
+
+    }
+    console.log("Todas las palabras acaban en a?")
+    console.log(palabras);
+
+    console.log("**************************************************");
+
+    let tmp = [1, 2, 3, 4];
+    console.log("Valor previo cambio: " + tmp)
+</script>
 
 </html>

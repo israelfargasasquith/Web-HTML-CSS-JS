@@ -14,7 +14,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
 
@@ -67,12 +66,16 @@
         }
 
         .penIcon {
-            transition: all .5s ease;
             color: #fff;
             font-size: 1.2em;
         }
 
-        .penIcon:hover {
+
+        .clickable {
+            transition: all .5s ease;
+        }
+
+        .clickable:hover {
             color: #001F3F;
             cursor: pointer;
         }
@@ -100,7 +103,7 @@
             width: 8%;
             font-family: Bebas Neue;
             font-size: 1.2em;
-            transition: all .5s ease;
+            transition: all .75s ease;
             color: #fff;
         }
 
@@ -130,6 +133,7 @@
         .todoItem {
             display: flex;
             gap: 5px;
+            cursor: default;
         }
 
         .todoItem p {
@@ -140,12 +144,6 @@
             display: flex;
             align-items: center;
             gap: 5px;
-            transition: all .5s ease;
-        }
-
-        #actions:hover {
-            background-color: white;
-            color: black;
         }
     </style>
 </head>
@@ -153,7 +151,7 @@
 <body>
     <header>
         <h1>To-Dos</h1>
-        <i class="fa-solid fa-pen penIcon"></i>
+        <i class="fa-solid fa-pen penIcon clickable"></i>
     </header>
     <main>
         <section id="addTodo">
@@ -174,7 +172,7 @@
 </body>
 <script>
 
-    let todos = [];
+    let todos = ["hamburger"];
     const todoList = document.getElementById('todos');
     const todoInput = document.getElementById('textInput');
     const inputButton = document.getElementById('add');
@@ -196,10 +194,10 @@
                 `<div class="todoItem">
                     <p>${i + 1}. ${todo}</p>
                     <div class="actions">
-                        <span class="material-symbols-outlined">
+                        <span class="material-symbols-outlined clickable">
                             check_circle
                         </span>
-                          <span class="material-symbols-outlined">
+                          <span class="material-symbols-outlined clickable">
                             cancel
                         </span>
                     </div>
