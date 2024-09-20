@@ -45,20 +45,107 @@
 </body>
 
 <script>
-    const palabras = ['manzana', 'pera', 'albaricoqua'];
+    /* const palabras = ['manzana', 'pera', 'albaricoqua'];
+ 
+ 
+     function acabaA(words) {
+         return words.every(palabra => palabra[palabra.length - 1] == "a");
+ 
+     }
+     console.log("Todas las palabras acaban en a?")
+     console.log(palabras);
+ 
+     console.log("**************************************************");
+     const numbers = [1, 2, 3, 4, 5, 6, 7]
+ 
+     const doubleEvenNumbers = numbers.reduce((accumulator, currentNumber) => {
+         const isEven = currentNumber % 2 === 0
+         const doubled = currentNumber * 2
+         const isGreaterThanFive = doubled > 5
+ 
+         // si es par y mayor que 5, lo añadimos al array
+         if (isEven && isGreaterThanFive) {
+             // para ello devolvemos un nuevo array con el valor actual
+             return accumulator.concat(doubled)
+         } else {
+             // si no, devolvemos lo que ya teníamos
+             return accumulator
+         }
+     }, []) // <- el array vacío es el valor inicial
+ 
+     console.log(doubleEvenNumbers) // [8, 12]
+ 
+     function palabrasMayoresIndice(words, word) {
+         let index = words.indexOf(word);
+         let filtradas = words.filter(function (w){
+             return w.length > index;
+         })
+         console.log(filtradas);
+     }
+     let resultado = palabrasMayoresIndice(palabras, "pera");
+     console.log(resultado);
+     
+     let frutas = ['melon', 'uva', 'aguacate', 'sandia', 'tomate', 'manzana']
+     let filtroFrutas = frutas.filter(string => string.length > 3)
+     let mapFrutas = frutas.map((string) => string.length)
+     console.log(filtroFrutas)
+     console.log(mapFrutas)
+     */
+    const lenguajes = [
+        ['HTML', 'CSS', 'JavaScript'],
+        ['Java', 'C++', 'Python'],
+        ['Ruby', 'Go', 'Swift'],
+        ['x', 'd', 'f', 'f']
+    ]
 
+    const lenguajes2 = [
+        ['HTML', 'CSS', 'JavaScript'],
+        ['Java', 'C++', 'Python'],
+        ['Ruby', 'Go', 'Swift']
+    ]
 
-    function acabaA(words) {
-        return words.every(palabra => palabra[palabra.lenght - 1] == "a");
+    const lenguajes3 = [
+        ['HTML', 'CSS', 'JS'],
+        ['Java', 'C++', 'Python'],
+        ['Ruby', 'JavaScript', 'Swift']
+    ]
 
+    const lenguajes4 = [
+        ['HTML', 'CSS', 'JS', 'PHP', 'Kotlin'],
+        ['Java', 'C++', 'Python', 'C#', 'Swift'],
+        ['Ruby', 'Rust', 'Lisp', 'Go', 'JavaScript']
+    ]
+    const lenguajes5 = [
+        ['HTML', 'CSS', 'JS', 'PHP', 'Kotlin'],
+        ['Java', 'C++', 'Python', 'C#', 'Swift'],
+        ['Ruby', 'Rust', 'Lisp', 'Go', 'Miau']
+    ]
+
+    function findJavaScript(matrix) {
+        let position = [-1, -1]
+        for (let i = 0; i < matrix.length; i++) {
+            for (let j = 0; j < matrix[i].length; j++) {
+                console.log("i = " + i + "\nj = " + j + "\nVal = " + matrix[i][j])
+                if (matrix[i][j] == "JavaScript") {
+                    position[0] = i;
+                    position[1] = j;
+                    return position;
+                }
+            }
+        }
+
+        return position;
     }
-    console.log("Todas las palabras acaban en a?")
-    console.log(palabras);
 
-    console.log("**************************************************");
-
-    let tmp = [1, 2, 3, 4];
-    console.log("Valor previo cambio: " + tmp)
-</script>
+    const position = findJavaScript(lenguajes)
+    console.log(position) // -> [0, 2]
+    position = findJavaScript(lenguajes2)
+    console.log(position) // -> [0, 2]
+    position = findJavaScript(lenguajes3)
+    console.log(position) // -> [0, 2]
+    position = findJavaScript(lenguajes4)
+    console.log(position) // -> [0, 2]
+    position = findJavaScript(lenguajes5)
+    console.log(position) // -> [0, 2]</script>
 
 </html>
