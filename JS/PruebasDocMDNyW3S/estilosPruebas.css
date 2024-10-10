@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.easterEgg {
+    width: 20%;
+    height: 20%;
+    padding: 1%;
+    display: none;
+}
+
+#secreto {
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    width: 10%;
+    min-height: 1.5em;
+    height: 10%;
+}
+
+#secreto:hover {
+    background-color: blue;
+    border: 0.1 em black solid;
+}
