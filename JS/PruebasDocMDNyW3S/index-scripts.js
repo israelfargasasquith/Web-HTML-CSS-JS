@@ -1,5 +1,5 @@
-let changed = false;
 let countAlerts = 0;
+let changed = false;
 
 function changePTxt() {
     if (!changed) {
@@ -16,8 +16,19 @@ function changePTxt() {
 }
 
 function showAlertWhenClicked() {
-    window.alert("Alerta numero: " + countAlerts);
-    countAlerts++;
+    if (countAlerts <= 2) {
+        alert("Alerta numero: " + countAlerts);
+        console.log(countAlerts);
+        document.getElementById("awebo").style.visibility = "hidden";
+        countAlerts++;
+    }
+
+    if (countAlerts == 3) {
+        console.log(countAlerts);
+        document.getElementById("awebo").style.visibility = "visible";
+        countAlerts = 0;
+    }
+
 }
 
 

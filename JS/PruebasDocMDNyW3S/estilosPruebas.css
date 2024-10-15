@@ -10,7 +10,10 @@ h1 {
     width: 20%;
     height: 20%;
     padding: 1%;
-    display: none;
+}
+
+#awebo {
+    visibility: hidden;
 }
 
 #secreto {
