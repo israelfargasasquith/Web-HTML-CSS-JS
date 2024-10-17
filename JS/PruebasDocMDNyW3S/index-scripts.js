@@ -1,5 +1,16 @@
 let countAlerts = 0;
 let changed = false;
+let formatoLargo = true;
+let checkBox = document.querySelector("input[name=cambioFormato]");
+checkBox.addEventListener('change', function () {
+    if (this.checked) {
+        document.getElementById("mensaje").innerHTML = "ahora el formato sera corto";
+        formatoLargo = false;
+    } else {
+        document.getElementById("mensaje").innerHTML = "ahora el formato sera largo";
+        formatoLargo = true;
+    }
+})
 
 function changePTxt() {
     if (!changed) {
@@ -30,6 +41,17 @@ function showAlertWhenClicked() {
     }
 
 }
+
+function dimeHora(este) {
+    if (formatoLargo) {
+        este.innerHTML = Date()
+    } else {
+        const mensaje = Date();
+        este.innerHTML = mensaje.substring(16, 24);
+    }
+
+}
+
 
 
 
