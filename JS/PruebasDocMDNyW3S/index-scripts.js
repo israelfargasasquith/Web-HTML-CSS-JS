@@ -11,6 +11,8 @@ checkBox.addEventListener('change', function () {
         formatoLargo = true;
     }
 })
+let epochMiliseconds = document.getElementById("epochMiliseconds");
+//let epochMiliseconds = document.querySelector("input[name=epochMiliseconds]");
 
 function changePTxt() {
     if (!changed) {
@@ -50,6 +52,18 @@ function dimeHora(este) {
         este.innerHTML = mensaje.substring(16, 24);
     }
 
+}
+
+function epochTime() {
+    const ahora = new Date();
+    //console.log(Number(new Date("" + ahora.getFullYear() + "-" + (ahora.getMonth() + 1) + "-" + ahora.getDate())));
+    //console.log(ahora.getTime()); Hace lo mismo que  Number(ahora) y Date.now() tambien
+    epochMiliseconds.innerHTML = Number(ahora) + " <br>Segun el tiempo EPOCH";
+}
+
+function actualizarFecha() {
+    const ahora = new Date();
+    document.getElementById("")
 }
 
 

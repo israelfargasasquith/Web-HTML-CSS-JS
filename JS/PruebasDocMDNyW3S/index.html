@@ -12,9 +12,7 @@
     <h1>Hola este es el index de pruebas</h1>
     <p id="firstP">Este es el texto original</p>
     <button type="button" onclick="changePTxt()">Haz click!</button>
-    <br>
     <img id="awebo" class="easterEgg" src="awebo.jpg">
-    <br>
     <button id="secreto" onclick="showAlertWhenClicked()"></button>
     <br>
     <button onclick="dimeHora(this)">La hora es?</button>
@@ -23,6 +21,26 @@
         <input type="checkbox" name="cambioFormato">
         <p id="mensaje"></p>
     </span>
+    <button onclick="epochTime()">La hora es?</button>
+    <br>
+    <span name="epochMiliseconds" id="epochMiliseconds"></span>
+    <br>
+    <p>En España son las:</p>
+    <span class="wrapperFechaYHora">
+        <span id="fecha" class="fechaYhora">
+            <span id="dia"></span>
+            <span id="mes"></span>
+            <span id="año"></span>
+        </span>
+    </span>
+    <br>
+    <span id="hora" class="fechaYhora">
+        <span id="segundos"></span>
+        <span id="minutos"></span>
+        <span id="horas"></span>
+    </span>
+    <br>
+    <button onclick="actualizarFecha()">Actualiza fecha y hora</button>
     <script src="index-scripts.js">
 
     </script>
