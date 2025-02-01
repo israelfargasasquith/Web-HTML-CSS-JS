@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    font-family: Roboto;
+    font-size: large;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 250px;
+    border: 0.1rem solid black;
+    background-color: rgb(235, 236, 237);
+    border-radius: 5px;
+}
+
+main>* {
+    padding: 0.2rem 1rem;
+    background-color: rgb(96 139 168 / 0.2);
+    flex: 1 1 100px;
+}
+
+.output {
+    width: 200px;
+    border: 0.2rem solid black;
+    text-align: center;
+    color: rgb(58, 162, 44);
+    background-color: rgb(32, 32, 32);
+}
+
+.keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.key {
+    flex: 1 1 calc(25% - 10px);
+    padding: 0.1rem;
+    margin: 0.1rem;
+    text-align: center;
+    box-sizing: border-box;
+    color: #fff;
+    background: linear-gradient(#e6541f, #e6541f) 50% 50%/calc(100% - 6px) calc(100% - 6px) no-repeat,
+        linear-gradient(76deg, rgba(148, 82, 147, 0.72) 0%, transparent 33.49%, rgba(170, 108, 128, 0.34) 46.37%, rgba(154, 95, 106, 0.53) 100%),
+        linear-gradient(38deg, #87476c 0%, #8d5474 100%);
+    box-sizing: content-box;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.key:hover {
+    opacity: 1;
+}
